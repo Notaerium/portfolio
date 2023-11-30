@@ -244,6 +244,13 @@ html::-webkit-scrollbar-thumb{
     border-radius: 10px;
 }
 
+.screenshot{
+  object-fit: contain;
+  object-position: center;
+  width: 100%;
+  height: auto;
+}
+
 @keyframes slide {
 	0% {transform:translateX(-100%);}
 	100% {transform:translateX(100%);}
