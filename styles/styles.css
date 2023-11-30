@@ -226,6 +226,21 @@ main {
   text-align: center;
 }
 
+html::-webkit-scrollbar {
+  width: 10px;
+  background-color: aliceblue;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  opacity: 0.5;
+}
+
+html::-webkit-scrollbar-thumb {
+  width: 10px;
+  background-color: #474747;
+  opacity: 0.8;
+  border-radius: 10px;
+}
+
 @keyframes slide {
   0% {
     transform: translateX(-100%);
