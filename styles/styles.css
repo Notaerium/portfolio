@@ -206,6 +206,26 @@ main {
   transform: rotate(15deg);
 }
 
+.skills {
+  margin-top: 15px;
+  color: black;
+}
+.skills .title {
+  width: 90vw;
+  font-family: "Russo One", sans-serif;
+  font-size: xx-large;
+  border: solid 1px #203864;
+  border-left: solid 5px;
+  border-bottom: none;
+  border-right: none;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+}
+
 @keyframes slide {
   0% {
     transform: translateX(-100%);
