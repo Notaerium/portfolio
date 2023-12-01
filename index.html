@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Russo+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400&display=swap" rel="stylesheet">
     <script src="/scripts/scripts.js" defer></script>
     <title>Vinh's Portfolio!</title>
 </head>
@@ -18,7 +19,7 @@
             <div class="title"><a href="#skills">Compétences</a></div>
         </div>
         <div class="nav-right">  
-            <div class="title"><a href="#">Présentation</a></div>
+            <div class="title"><a href="#introduction">Présentation</a></div>
             <div class="title"><a href="#">Contacts</a></div>
         </div>
     </nav>
@@ -40,13 +41,13 @@
             <div class="project">
                 <div class="left">
                     <div class="text">
-                        <p>Pad musical</p>
-                        <p>Il s'agit d'un pad musical créé à l'aide de Web Audio API. Il y a une fonction Looper, qui permet de toujours s'ammuser en rythme, et la fonction Libre pour ceux qui sont plus à l'aise.</p>
+                        <p class="subtitle">Pad musical</p>
+                        <p>Il s'agit d'un pad musical créé à l'aide de Web Audio API. Il y a une fonction Looper, qui permet de toujours s'ammuser en rythme, et la fonction Libre pour ceux qui sont plus à l'aise.</p></br>
                         <a href="">Aller vers la site</a>
                         <div class="tech">
-                            <img class="html" src="ressources/images/file_type_html_icon_130541.png" title="html" height="90px">
+                            <img class="techIcons" src="ressources/images/html-icon.svg" title="html" height="90px">
                             <img class="techIcons" src="ressources/images/css-3-seeklogo.com.svg" title="css">
-                            <img class="techIcons" src="ressources/images/javascript-js-seeklogo.com.svg" title="js">
+                            <img class="techIcons" src="ressources/images/javascript-js-seeklogo.com.svg" title="javascript">
                         </div>
                     </div>
                 </div>
@@ -63,8 +64,8 @@
                 <span></span>
                 <div class="right">
                     <div class="text">
-                        <p>Panneau d'affichage</p>
-                        <p>C'est une application Saas à utiliser au sein d'une entreprise pour faire passer des notices. Il complémente le panneau d'affiche physique.</p>
+                        <p class="subtitle">Panneau d'affichage</p>
+                        <p>C'est une application Saas à utiliser au sein d'une entreprise pour faire passer des notices. Il complémente le panneau d'affiche physique.</p></br>
                         <a href="">Aller vers la site</a>
                         <div class="tech">
                             <img class="techIcons" src="ressources/images/symfony-seeklogo.com.svg" title="symfony">
@@ -79,8 +80,8 @@
             <div class="project">
                 <div class="left">
                     <div class="text">
-                        <p>Système de réservation</p>
-                        <p>Une autre application cette fois réalisée avec JEE. L'objectif est de facilité l'emprunt et la réservation de matériel au sein d'une entreprise.</p>
+                        <p class="subtitle">Système de réservation</p>
+                        <p>Une autre application cette fois réalisée avec JEE. L'objectif est de facilité l'emprunt et la réservation de matériel au sein d'une entreprise.</p></br>
                         <a target="_blank" href="https://github.com/Notaerium/SaasReservation">Aller vers le respository Github</a>
                         <div class="tech">
                            <img class="techIcons" src="ressources/images/javaee-seeklogo.com.svg" title="JEE">
@@ -90,19 +91,19 @@
                 </div>
                 <span></span>
                 <div class="right">
-                    <a target="_blank" href="https://github.com/Notaerium/SaasReservation"><img class="screenshot" src="ressources/images/looper_screenshot.png" title="Looper music pad" height="25%"></a>
+                    <a target="_blank" href="https://github.com/Notaerium/SaasReservation"><img class="screenshot" src="ressources/images/reservation.png" title="Borrowing system" height="25%"></a>
                 </div>
             </div>
 
             <div class="project">
                 <div class="left">
-                    <a target="_blank" href="https://github.com/Notaerium/PythonProjectCS50P"><img class="screenshot" src="ressources/images/looper_screenshot.png" title="Looper music pad" height="25%"></a>
+                    <a target="_blank" href="https://github.com/Notaerium/PythonProjectCS50P"><img class="screenshot" src="ressources/images/hogwarts logbook.png" title="Hogwarts' Logbook" height="25%"></a>
                 </div>
                 <span></span>
                 <div class="right">
                     <div class="text">
-                        <p>Panneau d'affichage</p>
-                        <p>Il s'agit d'un pad musical créé à l'aide de Web Audio API. Il y a une fonction Looper, qui permet de toujours s'ammuser en rythme, et la fonction Libre pour ceux qui sont plus à l'aise.</p>
+                        <p class="subtitle">Hogwarts' Logbook</p>
+                        <p>Ce projet a été réalisé pour l'obtention du diplôme du CS50P, le cours présenté par l'université d'Harvard portant sur le Python.</p></br>
                         <a target="_blank" href="https://github.com/Notaerium/PythonProjectCS50P">Aller vers le respository Github</a>
                         <div class="tech">
                             <img class="techIcons" src="ressources/images/python-seeklogo.com.svg" title="Python">
@@ -114,34 +115,66 @@
         <div id="skills"></div>
         <section class="details skills">
             <div class="title"><p>Compétences</p></div>
+            <div class="subtitle">Front-end</div>
             <div class="icon-group">
-                <img class="html" src="ressources/images/file_type_html_icon_130541.png" title="html" height="90px">
+                <img class="techIcons" src="ressources/images/html-icon.svg" title="html" height="90px">
                 <img class="techIcons" src="ressources/images/css-3-seeklogo.com.svg" title="css">
-                <img class="techIcons" src="ressources/images/javascript-js-seeklogo.com.svg" title="js">
-                <img class="techIcons" src="ressources/images/symfony-seeklogo.com.svg" title="symfony">
-                <img class="techIcons" src="ressources/images/react-seeklogo.com.svg" title="react">
+                <img class="techIcons" src="ressources/images/javascript-js-seeklogo.com.svg" title="js">               
                 <img class="techIcons" src="ressources/images/typescript-seeklogo.com.svg" title="typescript">
-                <img class="techIcons" src="ressources/images/bootstrap-5-seeklogo.com.svg" title="bootstrap">
+                <img class="techIcons" src="ressources/images/bootstrap-5-seeklogo.com.svg" title="bootstrap">               
+                <img class="techIcons" src="ressources/images/sass-seeklogo.com.svg" title="Sass">
+            </div>
+            <div class="subtitle">Back-end</div>
+            <div class="icon-group">
                 <img class="techIcons" src="ressources/images/javaee-seeklogo.com.svg" title="JEE">
                 <img class="techIcons" src="ressources/images/python-seeklogo.com.svg" title="Python">
-                <img class="techIcons" src="ressources/images/git-bash-seeklogo.com.svg" title="Bash">
-                <img class="techIcons" src="ressources/images/github-seeklogo.com.svg" title="Github">
-                <img class="techIcons" src="ressources/images/sass-seeklogo.com.svg" title="Sass">
-                <img class="techIcons" src="ressources/images/visual-studio-code-seeklogo.com.svg" title="VSCode">
+                <img class="techIcons" src="ressources/images/c-programming-language-seeklogo.com.svg" title="C">
+                <img class="techIcons" src="ressources/images/c-seeklogo.com.svg" title="C++">
+                <img class="techIcons" src="ressources/images/c-sharp-c-seeklogo.com.svg" title="C#">
+                <img class="techIcons" src="ressources/images/php-seeklogo.com.svg" title="php">
+            </div>
+            <div class="subtitle">Base de donnée</div>
+                <div class="icon-group">
+                    <img class="techIcons" src="ressources/images/logo-mysql-170x115.png" title="MySQL">
+                </div>
+            <div class="subtitle">Frameworks</div>
+                <div class="icon-group">
+                    <img class="techIcons" src="ressources/images/react-seeklogo.com.svg" title="react">
+                    <img class="techIcons" src="ressources/images/symfony-seeklogo.com.svg" title="symfony">
+                </div>
+            <div class="subtitle">Outils</div>
+                <div class="icon-group">
+                    <img class="techIcons" src="ressources/images/git-bash-seeklogo.com.svg" title="Bash">
+                    <img class="techIcons" src="ressources/images/github-seeklogo.com.svg" title="Github">
+                    <img class="techIcons" src="ressources/images/visual-studio-code-seeklogo.com.svg" title="VSCode">
+                    <img class="techIcons" src="ressources/images/Eclipse_(software)-Logo.wine.png" title="Eclipse">
+                </div>
+            <div class="subtitle">Langues</div>
+            <div class="languages">
+                <div class="lang"><img class="flag" src="ressources/images/france-flag-icon.svg" alt="French">Français</div>
+                <div class="lang"><img class="flag" src="ressources/images/united-kingdom-flag-icon.svg" alt="English">Anglais</div>
+                <div class="lang"><img class="flag" src="ressources/images/japan-flag-icon.svg" alt="Japanese">Japonais</div>
             </div>
         </section>
-        <section class="details introduction">
+        <section id='introduction' class="details introduction">
             <div class="title"><p>Un petit mot me concernant</p></div>
-            <p>Après avoir passé quelques années à voyager au Japon et en Australie, j'ai décidé de revenir vers une de mes premières passion: la programmation.</p>
-            <p>Je travail sur mes projets personnels qui lie cette passion avec les langues et la musique.</p>
-            <p>Curieux par nature, j'adore découvrir de nouvelles choses, de nouvelles technologies et rencontrer de nouvelles personnes.</p>
-            <p>J'espère que nous aurons l'occasion de travailler ensemble.</p>
+            <div class="text">
+                <p>Après avoir passé quelques années à voyager au Japon et en Australie, j'ai décidé de revenir vers une de mes premières passion: la programmation.</p>
+                <p>Je travail sur mes projets personnels qui lie cette passion avec les langues et la musique.</p>
+                <p>Curieux par nature, j'adore découvrir de nouvelles choses, de nouvelles technologies et rencontrer de nouvelles personnes.</p>
+                <p>Au plaisir de pouvoir travailler avec vous !</p>
+            </div>
         </section>
     </main>
     <footer>
+        <div>Contactez-moi !</div>
         <div class="contacts">
-            Github
-            mail
+            <div>
+                <img src="ressources/images/github-icon-2048x1988-jzvzcf2t.png" alt="Github"><a href="https://github.com/Notaerium">https://github.com/Notaerium</a>
+            </div>
+            <div>
+                <img src="ressources/images/attherate-icon.svg" alt="Mail">parneix.vinh@gmail.com
+            </div>
         </div>
     </footer>
 </body>

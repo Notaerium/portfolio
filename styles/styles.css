@@ -10,6 +10,7 @@ body {
   flex-direction: column;
   gap: 10px;
   overflow-x: hidden;
+  font-family: "Roboto", sans-serif;
 }
 
 nav {
@@ -76,13 +77,11 @@ main {
   overflow: hidden;
   margin-top: 60px;
 }
-.name-card video {
-  width: 100%;
+.name-card .background-video {
+  margin-left: 10px;
   height: 500px;
   -o-object-fit: cover;
      object-fit: cover;
-}
-.name-card .background-video {
   position: absolute;
   width: 100vw;
   z-index: -1;
@@ -172,6 +171,9 @@ main {
   width: 300px;
   height: 300px;
 }
+.projects .project div p {
+  text-align: justify;
+}
 .projects .project div img {
   height: 300px;
 }
@@ -183,11 +185,12 @@ main {
 .projects .project .text .tech .techIcons {
   height: 80px;
 }
-.projects .project .text .tech .html {
-  height: 90px;
-}
 .projects .project .text .tech img:hover {
   transform: rotate(15deg);
+}
+.projects .project:hover .text {
+  background-color: #DAE3F3;
+  border-radius: 50%;
 }
 
 .details .title {
@@ -214,12 +217,15 @@ main {
   justify-content: center;
   align-items: center;
 }
+.skills .icon-group {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
 
 .subtitle {
   border: none;
   color: gray;
   font-size: larger;
-  width: 90vw;
   font-family: "Russo One", sans-serif;
   padding: 10px;
   display: flex;
@@ -231,8 +237,7 @@ main {
 html::-webkit-scrollbar {
   width: 10px;
   background-color: rgba(240, 248, 255, 0.2);
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
+  border-radius: 10px;
 }
 
 html::-webkit-scrollbar-thumb {
@@ -251,17 +256,64 @@ html::-webkit-scrollbar-thumb {
 }
 
 .icon-group {
-  width: 90%;
+  width: 70%;
   display: flex;
   flex-wrap: wrap;
-  gap: 5px;
+  gap: 15px;
   justify-content: center;
+  margin-bottom: 30px;
+}
+
+.languages {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 50%;
+}
+.languages .lang {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.languages .flag {
+  height: 50px;
+}
+
+.introduction {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.introduction .text {
+  margin-top: 20px;
+  font-size: large;
 }
 
 footer {
   width: 100vw;
   background-color: #203864;
   color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 10px;
+}
+
+.contacts {
+  margin-left: 20px;
+}
+.contacts img {
+  width: 20px;
+}
+.contacts a {
+  color: white;
+}
+.contacts div {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
 @keyframes slide {
