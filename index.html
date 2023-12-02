@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles/styles.css"/>
+    <link rel="stylesheet" href="styles/styles.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Russo+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400&display=swap" rel="stylesheet">
-    <script src="/scripts/scripts.js" defer></script>
+    <script src="scripts/scripts.js" defer></script>
     <title>Vinh's Portfolio!</title>
 </head>
 <body>
@@ -25,15 +25,27 @@
     </nav>
     <main>
         <section class="name-card">
-            <video autoplay loop muted plays-inline class="background-video" src="ressources/video/black_plate.mov"></video>
-            <span id="span-top"></span>
-            <div class="name-title">
-                <div class="name"><p>Vinh PARNEIX</p></div>
-                <div class="title"><p>Développeur Web Full Stack</p></div>
+            <div class="bg-img">
+                <img src="ressources/images/StockSnap_YWJQBD3VIX.jpg" alt="namecard">
             </div>
-            <span id="span-bot"></span>
+            <div class="front-card">
+                <span id="span-top"></span>
+                <div class="name-title">
+                    <div class="name"><p>Vinh PARNEIX</p></div>
+                    <div class="title"><p>Développeur Web Full Stack</p></div>
+                </div>
+                <span id="span-bot"></span>
+            </div>
         </section>
-        
+        <section id='introduction' class="details introduction">
+            <div class="title"><p>Un petit mot me concernant</p></div>
+            <div class="text">
+                <p>Après avoir passé quelques années à voyager au Japon et en Australie, j'ai décidé de revenir vers une de mes premières passion: la programmation.</p>
+                <p>Je travail sur mes projets personnels qui lie cette passion avec les langues et la musique.</p>
+                <p>Curieux par nature, j'adore découvrir de nouvelles choses, de nouvelles technologies et rencontrer de nouvelles personnes.</p>
+                <p>Au plaisir de pouvoir travailler avec vous !</p>
+            </div>
+        </section>
         <div id="projects"></div>
         <section class="details projects">
             <div class="title"><p>PROJETS</p></div>
@@ -123,6 +135,7 @@
                 <img class="techIcons" src="ressources/images/typescript-seeklogo.com.svg" title="typescript">
                 <img class="techIcons" src="ressources/images/bootstrap-5-seeklogo.com.svg" title="bootstrap">               
                 <img class="techIcons" src="ressources/images/sass-seeklogo.com.svg" title="Sass">
+                <img class="techIcons" src="ressources/images/react-seeklogo.com.svg" title="react">
             </div>
             <div class="subtitle">Back-end</div>
             <div class="icon-group">
@@ -132,22 +145,16 @@
                 <img class="techIcons" src="ressources/images/c-seeklogo.com.svg" title="C++">
                 <img class="techIcons" src="ressources/images/c-sharp-c-seeklogo.com.svg" title="C#">
                 <img class="techIcons" src="ressources/images/php-seeklogo.com.svg" title="php">
+                <img class="techIcons" src="ressources/images/symfony-seeklogo.com.svg" title="symfony">
             </div>
             <div class="subtitle">Base de donnée</div>
                 <div class="icon-group">
                     <img class="techIcons" src="ressources/images/logo-mysql-170x115.png" title="MySQL">
                 </div>
-            <div class="subtitle">Frameworks</div>
-                <div class="icon-group">
-                    <img class="techIcons" src="ressources/images/react-seeklogo.com.svg" title="react">
-                    <img class="techIcons" src="ressources/images/symfony-seeklogo.com.svg" title="symfony">
-                </div>
             <div class="subtitle">Outils</div>
                 <div class="icon-group">
                     <img class="techIcons" src="ressources/images/git-bash-seeklogo.com.svg" title="Bash">
                     <img class="techIcons" src="ressources/images/github-seeklogo.com.svg" title="Github">
-                    <img class="techIcons" src="ressources/images/visual-studio-code-seeklogo.com.svg" title="VSCode">
-                    <img class="techIcons" src="ressources/images/Eclipse_(software)-Logo.wine.png" title="Eclipse">
                 </div>
             <div class="subtitle">Langues</div>
             <div class="languages">
@@ -156,26 +163,17 @@
                 <div class="lang"><img class="flag" src="ressources/images/japan-flag-icon.svg" alt="Japanese">Japonais</div>
             </div>
         </section>
-        <section id='introduction' class="details introduction">
-            <div class="title"><p>Un petit mot me concernant</p></div>
-            <div class="text">
-                <p>Après avoir passé quelques années à voyager au Japon et en Australie, j'ai décidé de revenir vers une de mes premières passion: la programmation.</p>
-                <p>Je travail sur mes projets personnels qui lie cette passion avec les langues et la musique.</p>
-                <p>Curieux par nature, j'adore découvrir de nouvelles choses, de nouvelles technologies et rencontrer de nouvelles personnes.</p>
-                <p>Au plaisir de pouvoir travailler avec vous !</p>
+        <section id='contacts' class="details contacts">
+            <div class="title"><p>Mes compétences vous intéressent ? N'hésitez-pas !</p></div>
+            <div class="contacts">
+                <div>
+                    <img src="ressources/images/github-icon-2048x1988-jzvzcf2t.png" alt="Github"><a href="https://github.com/Notaerium">https://github.com/Notaerium</a>
+                </div>
+                <div>
+                    <img src="ressources/images/attherate-icon.svg" alt="Mail"><a href="mailto:parneix.vinh@gmail.com">parneix.vinh@gmail.com</a>
+                </div>
             </div>
         </section>
     </main>
-    <footer>
-        <div>Contactez-moi !</div>
-        <div class="contacts">
-            <div>
-                <img src="ressources/images/github-icon-2048x1988-jzvzcf2t.png" alt="Github"><a href="https://github.com/Notaerium">https://github.com/Notaerium</a>
-            </div>
-            <div>
-                <img src="ressources/images/attherate-icon.svg" alt="Mail">parneix.vinh@gmail.com
-            </div>
-        </div>
-    </footer>
 </body>
 </html>

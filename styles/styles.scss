@@ -11,12 +11,12 @@ $title-font : 'Russo One', sans-serif;
 body{
     display: flex;
     flex-direction: column;
-    gap: 10px;
     overflow-x: hidden;
     font-family: 'Roboto', sans-serif;
 }
 nav{
-    position: fixed;
+    position: sticky;
+    top:0;
     display: flex;
     justify-content: space-around;
     width: 100vw;
@@ -60,74 +60,104 @@ nav{
         }
     }
 }
-main{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-self: center;
-    z-index: 0;
-    color: black;
-    
+@keyframes shadefilter{
+    0%{filter: brightness(40%);}
+    100%{filter: brightness(10%);}
 }
-.name-card{
-    color: white;
-    width : 100vw;
-    height: 400px;
+@-webkit-keyframes shadefilter{
+    0%{filter: brightness(40%);}
+    100%{filter: brightness(10%); }
+}
+@keyframes movebg{
+    0%{top: -50px; }
+    100%{top: 0px;}
+}
+@-webkit-keyframes movebg{
+    0%{ top: -50px;}
+    100%{ top: 0px;}
+}
+main{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    align-self: center;
+    z-index: 0;
+    color: black;
+    width: 100vw;
+    
+}
+.name-card{
+    position: relative;
+    color: white;
+    width : 100vw;
+    height: 500px;
     overflow: hidden;
-    margin-top: 60px;
-    .background-video{
-        margin-left: 10px;
-        height:500px;
+    display: flex;
+    align-items: center;
+    .bg-img{
         object-fit: cover;
         position: absolute;
         width : 100vw;
         z-index : -1;
+        animation: shadefilter 5s infinite alternate ease, movebg 8s infinite alternate ;
+        
     }
-    .name-title{
-        font-family: $title-font;
-        .title {
-            font-size : 4rem;
-        }
-        .name{
-            font-style: italic;
-            font-size: 2rem;
-        }
-        padding-left: 10%;
+    .front-card{
+        position: absolute;
+        z-index: 1;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        width : 80%;
-        height: 80%;
-    }
-    span{
-        width: 80%;
-        height: 100px;
-        clip-path: polygon(1% 0%, 0% 10%, 0% 80%, 0.5% 95%, 1% 95%, 1.5% 80%, 1.5% 20%, 2.25% 10%, 50% 10%, 50.5% 7%, 50.5% 3%, 50% 0%);
-        background-color: goldenrod;
-        overflow: hidden;
-    }
-    #span-top:after{
-        content:'';
-        transform:translateX(100%);
-        width:100%;
-        height:220px;
-        position: absolute;
-        z-index:1;
-        animation: slide 2s infinite;
-        top:0;
+        align-items: center;
 
-        background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,0.8) 50%,rgba(128,186,232,0) 99%,rgba(125,185,232,0) 100%);
-    }
-    #span-bot{
-        transform: rotate(180deg);
+        width: 100vw;
+        .name-title{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+            font-family: $title-font;
+            .title {
+                font-size : 4rem;
+            }
+            .name{
+                font-style: italic;
+                font-size: 2rem;
+            }
+            padding-left: 10%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width : 80%;
+            height: 80%;
+        }
+        span{
+            width: 80%;
+            height: 100px;
+            clip-path: polygon(1% 0%, 0% 10%, 0% 80%, 0.5% 95%, 1% 95%, 1.5% 80%, 1.5% 20%, 2.25% 10%, 50% 10%, 50.5% 7%, 50.5% 3%, 50% 0%);
+            background-color: goldenrod;
+            overflow: hidden;
+        }
+        #span-top:after{
+            content:'';
+            transform:translateX(100%);
+            width:100%;
+            height:220px;
+            position: absolute;
+            z-index:1;
+            animation: slide 2s infinite;
+            top:0;
+    
+            background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,0.8) 50%,rgba(128,186,232,0) 99%,rgba(125,185,232,0) 100%);
+        }
+        #span-bot{
+            transform: rotate(180deg);
+        }
     }
     #span-bot:after{
         content:'';
-        transform:translateX(100%);
+        transform: translateX(100%);
         width:100%;
         height:220px;
         position: absolute;
@@ -153,6 +183,24 @@ main{
         transform: rotate(90deg);
     }
     .project{
+        .left{
+            margin-left: -1000px;
+            visibility: hidden;
+            transition: 1s ease-in-out; 
+        }
+        .left .leftslide{
+            margin-left: 0px;
+            visibility: visible;
+        }
+        .right{
+            margin-right: -1000px;
+            visibility: hidden;
+            transition: 1s ease-in-out; 
+        }
+        .left .rightslide{
+            margin-right: 0px;
+            visibility: visible;
+        }
         display: flex;
         flex-direction: row;
         align-self: center;
@@ -292,23 +340,25 @@ footer{
     background-color: $base-color;
     color: white;
     display: flex;
-    flex-direction: column;
-    padding: 10px;
-    gap: 10px;
+    flex-direction: row;
 }
 
 .contacts{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
     margin-left: 20px;
     img{
-        width: 20px;
+        width: 15px;
+        margin: 5px;
+
     }
     a{
-        color: white;
+        color: black;
     }
     div{
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
         gap: 10px;
     }
 }
@@ -317,3 +367,22 @@ footer{
 	0% {transform:translateX(-100%);}
 	100% {transform:translateX(100%);}
 }
+
+// @keyframes slideLeftShutter{
+//     0%{
+//         margin-left : -2000px
+//     }
+//     100%{
+//         margin-left : 0;
+//     }
+// }
+
+// @keyframes slideRightShutter{
+//     0%{
+//         margin-right : -2000px
+//     }
+//     100%{
+//         margin-right : 0;
+//     }
+// }
+
