@@ -194,18 +194,18 @@ main {
 .projects .project .left {
   margin-left: -1000px;
   visibility: hidden;
-  transition: 1s ease-in-out;
+  transition: 1s ease;
 }
-.projects .project .left .leftslide {
+.projects .project .leftslide {
   margin-left: 0px;
   visibility: visible;
 }
 .projects .project .right {
   margin-right: -1000px;
   visibility: hidden;
-  transition: 1s ease-in-out;
+  transition: 1s ease;
 }
-.projects .project .left .rightslide {
+.projects .project .rightslide {
   margin-right: 0px;
   visibility: visible;
 }

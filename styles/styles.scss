@@ -101,7 +101,6 @@ main{
         width : 100vw;
         z-index : -1;
         animation: shadefilter 5s infinite alternate ease, movebg 8s infinite alternate ;
-        
     }
     .front-card{
         position: absolute;
@@ -186,18 +185,18 @@ main{
         .left{
             margin-left: -1000px;
             visibility: hidden;
-            transition: 1s ease-in-out; 
+            transition: 1s ease;
         }
-        .left .leftslide{
+        .leftslide{
             margin-left: 0px;
             visibility: visible;
         }
         .right{
             margin-right: -1000px;
             visibility: hidden;
-            transition: 1s ease-in-out; 
+            transition: 1s ease;
         }
-        .left .rightslide{
+        .rightslide{
             margin-right: 0px;
             visibility: visible;
         }
