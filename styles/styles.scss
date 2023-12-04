@@ -1,5 +1,6 @@
 $base-color: #203864;
 $sub-color: #DAE3F3;
+$int-colot: #203864;
 $title-font : 'Russo One', sans-serif;
 
 * {
@@ -229,6 +230,9 @@ main{
         width : 200px;
         transform: rotate(90deg);
     }
+    .sm-show{
+        display:none;
+    }
     .project{
         display: flex;
         flex-direction: row;
@@ -257,6 +261,34 @@ main{
             visibility: visible;
         }
 
+        .screenshot{
+            width: 300px;
+            a{
+                position: absolute;
+                .shutter{
+                    margin-top:600px;
+                    background-color: rgba(32, 56, 101, 0.5);
+                    width: 300px;
+                    height: 300px;
+                    color: $sub-color;
+                    display: none;
+                    visibility: hidden;
+                }
+                img{
+                    height: 300px;
+                    object-fit: cover;
+                }
+            }
+            z-index: 5;
+        }
+        .screenshot:hover{
+            .shutter{
+                transition: 1s ease;
+                margin-top: -4px;
+                display: flex;
+                visibility: visible;
+            }
+        }
 
         div{
             display: flex;
@@ -267,9 +299,6 @@ main{
             height: 300px;
             p{
                 text-align: justify;
-            }
-            img{
-                height: 300px;
             }
         }
         .text{
@@ -466,20 +495,34 @@ html::-webkit-scrollbar-thumb{
             width : 15%;
             z-index: 2;
             left : -500px;
-            transition : 1s;
+            transition : 0.5s;
         }
     }
 
     .projects {
+        width: 100vw;
         display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 50px;
+        .sm-show{
+            display: flex;
+            width : 60%;
+            height : 3px;
+            background-color: $base-color;
+            transform: rotate(0deg);
+        }
         .project{
+            display: flex;
             flex-direction: column;
-            align-self: center;
-            justify-content: space-around;
-            width: 60vw;
+            align-items: center;
+            justify-content: center;
+            width: 100vw;
             height: 600px;
-            gap: 10px;
-            margin-top: 50px;
+            gap: 60px;
+            span{
+                display: none
+            }
             .left{
                 margin-left: -1000px;
                 visibility: hidden;
@@ -527,6 +570,7 @@ html::-webkit-scrollbar-thumb{
             }
         }
     }
+
     
 }
 

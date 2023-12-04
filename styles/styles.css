@@ -234,6 +234,9 @@ main {
   width: 200px;
   transform: rotate(90deg);
 }
+.projects .sm-show {
+  display: none;
+}
 .projects .project {
   display: flex;
   flex-direction: row;
@@ -262,6 +265,33 @@ main {
   margin-right: 0px;
   visibility: visible;
 }
+.projects .project .screenshot {
+  width: 300px;
+  z-index: 5;
+}
+.projects .project .screenshot a {
+  position: absolute;
+}
+.projects .project .screenshot a .shutter {
+  margin-top: 600px;
+  background-color: rgba(32, 56, 101, 0.5);
+  width: 300px;
+  height: 300px;
+  color: #DAE3F3;
+  display: none;
+  visibility: hidden;
+}
+.projects .project .screenshot a img {
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.projects .project .screenshot:hover .shutter {
+  transition: 1s ease;
+  margin-top: -4px;
+  display: flex;
+  visibility: visible;
+}
 .projects .project div {
   display: flex;
   flex-direction: column;
@@ -272,9 +302,6 @@ main {
 }
 .projects .project div p {
   text-align: justify;
-}
-.projects .project div img {
-  height: 300px;
 }
 .projects .project .text .tech {
   display: flex;
@@ -473,19 +500,33 @@ html::-webkit-scrollbar-thumb {
     width: 15%;
     z-index: 2;
     left: -500px;
-    transition: 1s;
+    transition: 0.5s;
   }
   .projects {
+    width: 100vw;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+  }
+  .projects .sm-show {
+    display: flex;
+    width: 60%;
+    height: 3px;
+    background-color: #203864;
+    transform: rotate(0deg);
   }
   .projects .project {
+    display: flex;
     flex-direction: column;
-    align-self: center;
-    justify-content: space-around;
-    width: 60vw;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
     height: 600px;
-    gap: 10px;
-    margin-top: 50px;
+    gap: 60px;
+  }
+  .projects .project span {
+    display: none;
   }
   .projects .project .left {
     margin-left: -1000px;
