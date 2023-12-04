@@ -11,53 +11,91 @@ $title-font : 'Russo One', sans-serif;
 body{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     overflow-x: hidden;
     font-family: 'Roboto', sans-serif;
     background: linear-gradient(180deg, rgba(255,255,255,1) 90%, rgba(32,56,100,1) 100%);
 }
+.links{
+    display: flex;
+    justify-content: space-around;
+    width : 100%;
+    align-items: center;
+    justify-content:space-around;
+    color: white;
+}
 nav{
     position: sticky;
+    z-index: 2;
     top:0;
     display: flex;
     justify-content: space-around;
     width: 100vw;
     height: 40px;
     background-color: rgba($base-color,1);
-    a{
-        color: white;
-    }
-    z-index: 1;
-    div{
+    .burgerIcone{
+        background-color: rgba($base-color,1);
         display: flex;
-        align-self: center;
-        flex-direction: row;
-        gap: 3em;
-        margin: 10px;
-        font-family: 'Orbitron', sans-serif;
-        font-family: $title-font;
-        
-        .nav-left{
-            justify-content: space-around;
-            padding-left: 50px;
-            
-        }
-        .title{
-            display: flex;
-            justify-content: center;
-            width: 80px;
-            cursor: pointer;
-        }
-        .home{
-            width: 10px;
-        }
+        flex-direction: column;
+        align-items: center;
+        height : 30px;
+        left : 10px;
+        visibility: hidden;
+        display: none;
+        width: 100%;
         img{
             height: 30px;
+            width: 30px;
         }
         img:hover{
-            height:35px
+            border: solid $sub-color 2px;
+            border-radius: 25px;
+            justify-content: center;
+            align-items: center;
+            width: 30px;
+            cursor: pointer;
         }
-        .title:hover{
-            font-size: large;
+    }
+    .menu{
+        width: 100vw;
+        height: 40px;
+        display: flex;
+        justify-content: space-around;
+        a{
+            color: white;
+        }
+        div{
+            display: flex;
+            align-self: center;
+            flex-direction: row;
+            gap: 3em;
+            margin: 10px;
+            font-family: 'Orbitron', sans-serif;
+            font-family: $title-font;
+            
+            .nav-left{
+                justify-content: space-around;
+                padding-left: 50px;
+            }
+            .title{
+                display: flex;
+                justify-content: center;
+                width: 80px;
+                cursor: pointer;
+            }
+            .home{
+                width: 10px;
+                img{
+                    height: 30px;
+                }
+                img:hover{
+                    height:35px
+                }
+            }
+            .title:hover{
+                font-size: large;
+            }
         }
     }
 }
@@ -139,7 +177,7 @@ main{
         span{
             width: 80%;
             height: 100px;
-            clip-path: polygon(1% 0%, 0% 10%, 0% 80%, 0.5% 95%, 1% 95%, 1.5% 80%, 1.5% 20%, 2.25% 10%, 50% 10%, 50.5% 7%, 50.5% 3%, 50% 0%);
+            clip-path: polygon(1% 0%, 0% 10%, 0% 95%, 1.5% 20%, 2.25% 10%, 50% 10%, 50.5% 7%, 50.5% 3%, 50% 0%);
             background-color: goldenrod;
             overflow: hidden;
         }
@@ -171,6 +209,11 @@ main{
         background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,0.8) 50%,rgba(128,186,232,0) 99%,rgba(125,185,232,0) 100%);
     }
 }
+.introduction{
+    .text{
+        width : 80%;
+    }
+}
 .techIcons{
     height: 80px;
 }
@@ -187,6 +230,14 @@ main{
         transform: rotate(90deg);
     }
     .project{
+        display: flex;
+        flex-direction: row;
+        align-self: center;
+        justify-content: space-around;
+        width: 60vw;
+        height: 300px;
+        gap: 10px;
+        margin-top: 50px;
         .left{
             margin-left: -1000px;
             visibility: hidden;
@@ -205,14 +256,7 @@ main{
             margin-right: 0px;
             visibility: visible;
         }
-        display: flex;
-        flex-direction: row;
-        align-self: center;
-        justify-content: space-around;
-        width: 60vw;
-        height: 300px;
-        gap: 10px;
-        margin-top: 50px;
+
 
         div{
             display: flex;
@@ -235,6 +279,7 @@ main{
                 gap: 15px;
                 .techIcons{
                     height: 80px;
+                    transition: 0.5s;
                 }
                 img:hover{
                     transform: rotate(15deg);
@@ -262,6 +307,7 @@ main{
     padding: 10px;
     display: flex;
     flex-direction: row;
+    align-self: center;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -370,3 +416,130 @@ html::-webkit-scrollbar-thumb{
     border-radius: 10px;
 }
 
+@media (max-width:600px) and (orientation: portrait){
+    nav{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: $base-color;
+        .burgerIcone{
+            display: flex;
+            visibility: visible;
+            z-index: 4;
+        }
+        .menu{
+            background-color: $base-color;
+            position: absolute;
+            top: 30px;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            height: auto;
+            display: none;
+            gap: 20px;
+            .nav-left, .nav-right{
+                width: 100vw;
+                flex-direction: column;
+                justify-content: center;
+                background-color: $base-color;
+                .title{
+                    border-bottom: $sub-color solid 1px;
+                    height : 30px;
+                }
+                .home{
+                    border: none;
+                }
+            }
+        }
+        .display{
+            display: flex;
+            flex-direction: column;
+        }
+        .menuHomepage{
+            visibility: hidden;
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            background-color: #072A5D;
+            height : 100%;
+            top : 0;
+            width : 15%;
+            z-index: 2;
+            left : -500px;
+            transition : 1s;
+        }
+    }
+
+    .projects {
+        display: flex;
+        .project{
+            flex-direction: column;
+            align-self: center;
+            justify-content: space-around;
+            width: 60vw;
+            height: 600px;
+            gap: 10px;
+            margin-top: 50px;
+            .left{
+                margin-left: -1000px;
+                visibility: hidden;
+                transition: 1s ease;
+            }
+            .leftslide{
+                margin-left: 0px;
+                visibility: visible;
+            }
+            .right{
+                margin-right: -1000px;
+                visibility: hidden;
+                transition: 1s ease;
+            }
+            .rightslide{
+                margin-right: 0px;
+                visibility: visible;
+            }
+        }
+        .sm-reversed{
+            flex-direction: column-reverse;
+            align-self: center;
+            justify-content: space-around;
+            width: 60vw;
+            height: 600px;
+            gap: 10px;
+            margin-top: 50px;
+            .left{
+                margin-left: -1000px;
+                visibility: hidden;
+                transition: 1s ease;
+            }
+            .leftslide{
+                margin-left: 0px;
+                visibility: visible;
+            }
+            .right{
+                margin-right: -1000px;
+                visibility: hidden;
+                transition: 1s ease;
+            }
+            .rightslide{
+                margin-right: 0px;
+                visibility: visible;
+            }
+        }
+    }
+    
+}
+
+@media (max-width:500px) and (orientation: portrait){
+    main .name-card .front-card .name-title{
+        .title {
+            font-size : 2rem;
+        }
+        .name{
+            font-style: italic;
+            font-size: 1rem;
+        }
+    }
+    .details .title{font-size: 20px;}
+    .subtitle{font-size: 15px;}
+}

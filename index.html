@@ -12,15 +12,28 @@
     <title>Vinh's Portfolio!</title>
 </head>
 <body>
-    <nav>
-        <div class="nav-left"> 
-            <div class="title home"><a href="#"><img src="ressources\images\home-2502.svg" title="home"/></a></div>
-            <div class="title"><a href="#introduction">Présentation</a></div>
-            <div class="title"><a href="#projects">Projets</a></div>
-            <div class="title"><a href="#skills">Compétences</a></div>
+    <div class="links">
+        <div><a href="https://www.linkedin.com/in/vinh-parneix-290080110/">Linkedin</a></div>
+        <div><a href="https://github.com/Notaerium">Github</a></div>
+        <div><a href="mailto:parneix.vinh@gmail.com">Email</a></div>
+        <div>
+            <a href="ressources/file/CV Vinh PARNEIX Développeur web.pdf" download>CV</a>
         </div>
-        <div class="nav-right">  
-            <div class="title"><a href="#contacts">Contacts</a></div>
+    </div>
+    <nav>
+        <div class="burgerIcone" onclick="showMenu()">
+            <img src="ressources/images/Hamburger_icon.svg.png">
+        </div>
+        <div class="menu">
+            <div class="nav-left"> 
+                <div class="title home"><a href="#"><img src="ressources\images\home-2502.svg" title="home"/></a></div>
+                <div class="title"><a href="#introduction">Présentation</a></div>
+                <div class="title"><a href="#projects">Projets</a></div>
+                <div class="title"><a href="#skills">Compétences</a></div>
+            </div>
+            <div class="nav-right">  
+                <div class="title"><a href="#contacts">Contacts</a></div>
+            </div>
         </div>
     </nav>
     <main>
@@ -69,7 +82,7 @@
                 </div>
             </div>
 
-            <div class="project">
+            <div class="project sm-reversed">
                 <div class="left screenshot">
                     <a href=""><img class="screenshot" src="ressources/images/bulletin board.png" title="Looper music pad" height="25%"></a>
                 </div>
@@ -77,7 +90,7 @@
                 <div class="right">
                     <div class="text">
                         <p class="subtitle">Panneau d'affichage</p>
-                        <p>C'est une application Saas à utiliser au sein d'une entreprise pour faire passer des notices. Il complémente le panneau d'affiche physique.</p></br>
+                        <p>C'est une application Saas à utiliser au sein d'une entreprise pour faire passer des notices. Il complémente le panneau d'affichage physique.</p></br>
                         <a href="">Aller vers la site</a>
                         <div class="tech">
                             <img class="techIcons" src="ressources/images/symfony-seeklogo.com.svg" title="symfony">
@@ -107,7 +120,7 @@
                 </div>
             </div>
 
-            <div class="project">
+            <div class="project sm-reversed">
                 <div class="left">
                     <a target="_blank" href="https://github.com/Notaerium/PythonProjectCS50P"><img class="screenshot" src="ressources/images/hogwarts logbook.png" title="Hogwarts' Logbook" height="25%"></a>
                 </div>

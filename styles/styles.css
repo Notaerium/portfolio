@@ -8,25 +8,65 @@
 body {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   overflow-x: hidden;
   font-family: "Roboto", sans-serif;
   background: linear-gradient(180deg, rgb(255, 255, 255) 90%, rgb(32, 56, 100) 100%);
 }
 
+.links {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+  color: white;
+}
+
 nav {
   position: sticky;
+  z-index: 2;
   top: 0;
   display: flex;
   justify-content: space-around;
   width: 100vw;
   height: 40px;
   background-color: #203864;
-  z-index: 1;
 }
-nav a {
+nav .burgerIcone {
+  background-color: #203864;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 30px;
+  left: 10px;
+  visibility: hidden;
+  display: none;
+  width: 100%;
+}
+nav .burgerIcone img {
+  height: 30px;
+  width: 30px;
+}
+nav .burgerIcone img:hover {
+  border: solid #DAE3F3 2px;
+  border-radius: 25px;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  cursor: pointer;
+}
+nav .menu {
+  width: 100vw;
+  height: 40px;
+  display: flex;
+  justify-content: space-around;
+}
+nav .menu a {
   color: white;
 }
-nav div {
+nav .menu div {
   display: flex;
   align-self: center;
   flex-direction: row;
@@ -35,26 +75,26 @@ nav div {
   font-family: "Orbitron", sans-serif;
   font-family: "Russo One", sans-serif;
 }
-nav div .nav-left {
+nav .menu div .nav-left {
   justify-content: space-around;
   padding-left: 50px;
 }
-nav div .title {
+nav .menu div .title {
   display: flex;
   justify-content: center;
   width: 80px;
   cursor: pointer;
 }
-nav div .home {
+nav .menu div .home {
   width: 10px;
 }
-nav div img {
+nav .menu div .home img {
   height: 30px;
 }
-nav div img:hover {
+nav .menu div .home img:hover {
   height: 35px;
 }
-nav div .title:hover {
+nav .menu div .title:hover {
   font-size: large;
 }
 
@@ -142,8 +182,8 @@ main {
 .name-card .front-card span {
   width: 80%;
   height: 100px;
-  -webkit-clip-path: polygon(1% 0%, 0% 10%, 0% 80%, 0.5% 95%, 1% 95%, 1.5% 80%, 1.5% 20%, 2.25% 10%, 50% 10%, 50.5% 7%, 50.5% 3%, 50% 0%);
-          clip-path: polygon(1% 0%, 0% 10%, 0% 80%, 0.5% 95%, 1% 95%, 1.5% 80%, 1.5% 20%, 2.25% 10%, 50% 10%, 50.5% 7%, 50.5% 3%, 50% 0%);
+  -webkit-clip-path: polygon(1% 0%, 0% 10%, 0% 95%, 1.5% 20%, 2.25% 10%, 50% 10%, 50.5% 7%, 50.5% 3%, 50% 0%);
+          clip-path: polygon(1% 0%, 0% 10%, 0% 95%, 1.5% 20%, 2.25% 10%, 50% 10%, 50.5% 7%, 50.5% 3%, 50% 0%);
   background-color: goldenrod;
   overflow: hidden;
 }
@@ -171,6 +211,10 @@ main {
   animation: slide 2s infinite;
   animation-delay: 3s;
   background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 50%, rgba(128, 186, 232, 0) 99%, rgba(125, 185, 232, 0) 100%);
+}
+
+.introduction .text {
+  width: 80%;
 }
 
 .techIcons {
@@ -239,6 +283,7 @@ main {
 }
 .projects .project .text .tech .techIcons {
   height: 80px;
+  transition: 0.5s;
 }
 .projects .project .text .tech img:hover {
   transform: rotate(15deg);
@@ -261,6 +306,7 @@ main {
   padding: 10px;
   display: flex;
   flex-direction: row;
+  align-self: center;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -374,4 +420,131 @@ html::-webkit-scrollbar-thumb {
   width: 10px;
   background-color: rgba(71, 71, 71, 0.8);
   border-radius: 10px;
+}
+
+@media (max-width: 600px) and (orientation: portrait) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #203864;
+  }
+  nav .burgerIcone {
+    display: flex;
+    visibility: visible;
+    z-index: 4;
+  }
+  nav .menu {
+    background-color: #203864;
+    position: absolute;
+    top: 30px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    display: none;
+    gap: 20px;
+  }
+  nav .menu .nav-left, nav .menu .nav-right {
+    width: 100vw;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #203864;
+  }
+  nav .menu .nav-left .title, nav .menu .nav-right .title {
+    border-bottom: #DAE3F3 solid 1px;
+    height: 30px;
+  }
+  nav .menu .nav-left .home, nav .menu .nav-right .home {
+    border: none;
+  }
+  nav .display {
+    display: flex;
+    flex-direction: column;
+  }
+  nav .menuHomepage {
+    visibility: hidden;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: #072A5D;
+    height: 100%;
+    top: 0;
+    width: 15%;
+    z-index: 2;
+    left: -500px;
+    transition: 1s;
+  }
+  .projects {
+    display: flex;
+  }
+  .projects .project {
+    flex-direction: column;
+    align-self: center;
+    justify-content: space-around;
+    width: 60vw;
+    height: 600px;
+    gap: 10px;
+    margin-top: 50px;
+  }
+  .projects .project .left {
+    margin-left: -1000px;
+    visibility: hidden;
+    transition: 1s ease;
+  }
+  .projects .project .leftslide {
+    margin-left: 0px;
+    visibility: visible;
+  }
+  .projects .project .right {
+    margin-right: -1000px;
+    visibility: hidden;
+    transition: 1s ease;
+  }
+  .projects .project .rightslide {
+    margin-right: 0px;
+    visibility: visible;
+  }
+  .projects .sm-reversed {
+    flex-direction: column-reverse;
+    align-self: center;
+    justify-content: space-around;
+    width: 60vw;
+    height: 600px;
+    gap: 10px;
+    margin-top: 50px;
+  }
+  .projects .sm-reversed .left {
+    margin-left: -1000px;
+    visibility: hidden;
+    transition: 1s ease;
+  }
+  .projects .sm-reversed .leftslide {
+    margin-left: 0px;
+    visibility: visible;
+  }
+  .projects .sm-reversed .right {
+    margin-right: -1000px;
+    visibility: hidden;
+    transition: 1s ease;
+  }
+  .projects .sm-reversed .rightslide {
+    margin-right: 0px;
+    visibility: visible;
+  }
+}
+@media (max-width: 500px) and (orientation: portrait) {
+  main .name-card .front-card .name-title .title {
+    font-size: 2rem;
+  }
+  main .name-card .front-card .name-title .name {
+    font-style: italic;
+    font-size: 1rem;
+  }
+  .details .title {
+    font-size: 20px;
+  }
+  .subtitle {
+    font-size: 15px;
+  }
 }/*# sourceMappingURL=styles.css.map */
