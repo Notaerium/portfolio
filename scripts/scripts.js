@@ -2,20 +2,33 @@ document.addEventListener('contextmenu', (e)=> {
     e.preventDefault()
 })
 
+let projects = document.querySelectorAll(".project")
 let leftboxes = document.querySelectorAll(".left")
 let rightboxes = document.querySelectorAll(".right")
 
-document.addEventListener('scroll', ()=> {
-    leftboxes.forEach((leftbox, index) => {
-        if(leftbox.getBoundingClientRect().y < window.screen.height - 100 - leftbox.offsetHeight/2 ||
-        rightboxes[index].getBoundingClientRect().y < window.screen.height -100 - rightboxes[index].offsetHeight/2)
-        {
-            if(!leftbox.classList.contains('leftslide')){
-                leftbox.classList.add('leftslide')
+
+
+const options = {
+    root: null,
+    threshold: 0.5,
+    rootMargin:""    
+}
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        console.log(entry.target)
+        projects.forEach((project, index) => {
+            if(entry.target === project && entry.isIntersecting && !leftboxes[index].classList.contains('leftslide')){
+                leftboxes[index].classList.add('leftslide')
                 rightboxes[index].classList.add('rightslide')
             }
-        }
-    });
+        })
+        console.log(entry)
+
+    })
+}, options)
+
+projects.forEach(project =>{
+    observer.observe(project)
 })
 
 function showMenu(){

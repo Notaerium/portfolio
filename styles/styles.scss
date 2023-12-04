@@ -63,6 +63,7 @@ nav{
         height: 40px;
         display: flex;
         justify-content: space-around;
+        font-size: 2vw;
         a{
             color: white;
         }
@@ -243,9 +244,9 @@ main{
         gap: 10px;
         margin-top: 50px;
         .left{
+            transition: 1s ease;
             margin-left: -1000px;
             visibility: hidden;
-            transition: 1s ease;
         }
         .leftslide{
             margin-left: 0px;
@@ -306,9 +307,11 @@ main{
                 display: flex;
                 flex-direction: row;
                 gap: 15px;
+                flex-wrap: wrap;
                 .techIcons{
                     height: 80px;
                     transition: 0.5s;
+                    z-index: 6;
                 }
                 img:hover{
                     transform: rotate(15deg);
@@ -445,7 +448,11 @@ html::-webkit-scrollbar-thumb{
     border-radius: 10px;
 }
 
-@media (max-width:600px) and (orientation: portrait){
+@media (orientation : portrait) or (max-width: 1100px){
+    body{
+        width: 100vw;
+        overflow-x: hidden;
+    }
     nav{
         display: flex;
         flex-direction: column;
@@ -463,6 +470,8 @@ html::-webkit-scrollbar-thumb{
             width: 100vw;
             display: flex;
             flex-direction: column;
+            justify-content: center;
+            align-items: center;
             height: auto;
             display: none;
             gap: 20px;
@@ -513,20 +522,20 @@ html::-webkit-scrollbar-thumb{
             transform: rotate(0deg);
         }
         .project{
+            margin-top: 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             width: 100vw;
             height: 600px;
-            gap: 60px;
+            transition: 1s ease;
             span{
                 display: none
             }
             .left{
                 margin-left: -1000px;
                 visibility: hidden;
-                transition: 1s ease;
             }
             .leftslide{
                 margin-left: 0px;
@@ -535,7 +544,6 @@ html::-webkit-scrollbar-thumb{
             .right{
                 margin-right: -1000px;
                 visibility: hidden;
-                transition: 1s ease;
             }
             .rightslide{
                 margin-right: 0px;
@@ -549,11 +557,10 @@ html::-webkit-scrollbar-thumb{
             width: 60vw;
             height: 600px;
             gap: 10px;
-            margin-top: 50px;
+            margin-top: 20px;
             .left{
                 margin-left: -1000px;
                 visibility: hidden;
-                transition: 1s ease;
             }
             .leftslide{
                 margin-left: 0px;
@@ -562,7 +569,6 @@ html::-webkit-scrollbar-thumb{
             .right{
                 margin-right: -1000px;
                 visibility: hidden;
-                transition: 1s ease;
             }
             .rightslide{
                 margin-right: 0px;
@@ -570,11 +576,6 @@ html::-webkit-scrollbar-thumb{
             }
         }
     }
-
-    
-}
-
-@media (max-width:500px) and (orientation: portrait){
     main .name-card .front-card .name-title{
         .title {
             font-size : 2rem;
@@ -586,4 +587,82 @@ html::-webkit-scrollbar-thumb{
     }
     .details .title{font-size: 20px;}
     .subtitle{font-size: 15px;}
+}
+
+@media (orientation: landscape) and (min-height: 1200px){
+    nav{
+        position: sticky;
+        z-index: 2;
+        top:0;
+        display: flex;
+        justify-content: space-around;
+        width: 100vw;
+        height: 40px;
+        background-color: rgba($base-color,1);
+        .burgerIcone{
+            background-color: rgba($base-color,1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height : 30px;
+            left : 10px;
+            visibility: hidden;
+            display: none;
+            width: 100%;
+            img{
+                height: 30px;
+                width: 30px;
+            }
+            img:hover{
+                border: solid $sub-color 2px;
+                border-radius: 25px;
+                justify-content: center;
+                align-items: center;
+                width: 30px;
+                cursor: pointer;
+            }
+        }
+        .menu{
+            width: 100vw;
+            height: 40px;
+            display: flex;
+            justify-content: space-around;
+            font-size: 2vw;
+            a{
+                color: white;
+            }
+            div{
+                display: flex;
+                align-self: center;
+                flex-direction: row;
+                gap: 3em;
+                margin: 10px;
+                font-family: 'Orbitron', sans-serif;
+                font-family: $title-font;
+                
+                .nav-left{
+                    justify-content: space-around;
+                    padding-left: 50px;
+                }
+                .title{
+                    display: flex;
+                    justify-content: center;
+                    width: 80px;
+                    cursor: pointer;
+                }
+                .home{
+                    width: 10px;
+                    img{
+                        height: 30px;
+                    }
+                    img:hover{
+                        height:35px
+                    }
+                }
+                .title:hover{
+                    font-size: large;
+                }
+            }
+        }
+    }
 }

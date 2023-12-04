@@ -62,6 +62,7 @@ nav .menu {
   height: 40px;
   display: flex;
   justify-content: space-around;
+  font-size: 2vw;
 }
 nav .menu a {
   color: white;
@@ -248,9 +249,9 @@ main {
   margin-top: 50px;
 }
 .projects .project .left {
+  transition: 1s ease;
   margin-left: -1000px;
   visibility: hidden;
-  transition: 1s ease;
 }
 .projects .project .leftslide {
   margin-left: 0px;
@@ -307,10 +308,12 @@ main {
   display: flex;
   flex-direction: row;
   gap: 15px;
+  flex-wrap: wrap;
 }
 .projects .project .text .tech .techIcons {
   height: 80px;
   transition: 0.5s;
+  z-index: 6;
 }
 .projects .project .text .tech img:hover {
   transform: rotate(15deg);
@@ -449,7 +452,11 @@ html::-webkit-scrollbar-thumb {
   border-radius: 10px;
 }
 
-@media (max-width: 600px) and (orientation: portrait) {
+@media (orientation: portrait) or (max-width: 1100px) {
+  body {
+    width: 100vw;
+    overflow-x: hidden;
+  }
   nav {
     display: flex;
     flex-direction: column;
@@ -468,6 +475,8 @@ html::-webkit-scrollbar-thumb {
     width: 100vw;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     height: auto;
     display: none;
     gap: 20px;
@@ -517,13 +526,14 @@ html::-webkit-scrollbar-thumb {
     transform: rotate(0deg);
   }
   .projects .project {
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100vw;
     height: 600px;
-    gap: 60px;
+    transition: 1s ease;
   }
   .projects .project span {
     display: none;
@@ -531,7 +541,6 @@ html::-webkit-scrollbar-thumb {
   .projects .project .left {
     margin-left: -1000px;
     visibility: hidden;
-    transition: 1s ease;
   }
   .projects .project .leftslide {
     margin-left: 0px;
@@ -540,7 +549,6 @@ html::-webkit-scrollbar-thumb {
   .projects .project .right {
     margin-right: -1000px;
     visibility: hidden;
-    transition: 1s ease;
   }
   .projects .project .rightslide {
     margin-right: 0px;
@@ -553,12 +561,11 @@ html::-webkit-scrollbar-thumb {
     width: 60vw;
     height: 600px;
     gap: 10px;
-    margin-top: 50px;
+    margin-top: 20px;
   }
   .projects .sm-reversed .left {
     margin-left: -1000px;
     visibility: hidden;
-    transition: 1s ease;
   }
   .projects .sm-reversed .leftslide {
     margin-left: 0px;
@@ -567,14 +574,11 @@ html::-webkit-scrollbar-thumb {
   .projects .sm-reversed .right {
     margin-right: -1000px;
     visibility: hidden;
-    transition: 1s ease;
   }
   .projects .sm-reversed .rightslide {
     margin-right: 0px;
     visibility: visible;
   }
-}
-@media (max-width: 500px) and (orientation: portrait) {
   main .name-card .front-card .name-title .title {
     font-size: 2rem;
   }
@@ -587,5 +591,81 @@ html::-webkit-scrollbar-thumb {
   }
   .subtitle {
     font-size: 15px;
+  }
+}
+@media (orientation: landscape) and (min-height: 1200px) {
+  nav {
+    position: sticky;
+    z-index: 2;
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+    width: 100vw;
+    height: 40px;
+    background-color: #203864;
+  }
+  nav .burgerIcone {
+    background-color: #203864;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 30px;
+    left: 10px;
+    visibility: hidden;
+    display: none;
+    width: 100%;
+  }
+  nav .burgerIcone img {
+    height: 30px;
+    width: 30px;
+  }
+  nav .burgerIcone img:hover {
+    border: solid #DAE3F3 2px;
+    border-radius: 25px;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    cursor: pointer;
+  }
+  nav .menu {
+    width: 100vw;
+    height: 40px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 2vw;
+  }
+  nav .menu a {
+    color: white;
+  }
+  nav .menu div {
+    display: flex;
+    align-self: center;
+    flex-direction: row;
+    gap: 3em;
+    margin: 10px;
+    font-family: "Orbitron", sans-serif;
+    font-family: "Russo One", sans-serif;
+  }
+  nav .menu div .nav-left {
+    justify-content: space-around;
+    padding-left: 50px;
+  }
+  nav .menu div .title {
+    display: flex;
+    justify-content: center;
+    width: 80px;
+    cursor: pointer;
+  }
+  nav .menu div .home {
+    width: 10px;
+  }
+  nav .menu div .home img {
+    height: 30px;
+  }
+  nav .menu div .home img:hover {
+    height: 35px;
+  }
+  nav .menu div .title:hover {
+    font-size: large;
   }
 }/*# sourceMappingURL=styles.css.map */
