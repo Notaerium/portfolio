@@ -13,6 +13,7 @@ body{
     flex-direction: column;
     overflow-x: hidden;
     font-family: 'Roboto', sans-serif;
+    background: linear-gradient(180deg, rgba(255,255,255,1) 90%, rgba(32,56,100,1) 100%);
 }
 nav{
     position: sticky;
@@ -75,6 +76,10 @@ nav{
 @-webkit-keyframes movebg{
     0%{ top: -50px;}
     100%{ top: 0px;}
+}
+@keyframes slide {
+	0% {transform:translateX(-100%);}
+	100% {transform:translateX(100%);}
 }
 main{
     display: flex;
@@ -284,17 +289,6 @@ main{
     text-align: center;
 }
 
-html::-webkit-scrollbar{
-    width : 10px;
-    background-color: rgba(240, 248, 255, 0.2);
-    border-radius: 10px;
-}
-html::-webkit-scrollbar-thumb{
-    width : 10px;
-    background-color: rgba(71, 71, 71, 0.8);
-    border-radius: 10px;
-}
-
 .screenshot{
   object-fit: contain;
   object-position: center;
@@ -348,40 +342,31 @@ footer{
     justify-content: center;
     align-items: center;
     gap: 10px;
-    margin-left: 20px;
+    margin-bottom: 20px;
     img{
-        width: 15px;
+        width: 30px;
         margin: 5px;
-
     }
     a{
         color: black;
     }
     div{
         gap: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
     }
 }
 
-@keyframes slide {
-	0% {transform:translateX(-100%);}
-	100% {transform:translateX(100%);}
+html::-webkit-scrollbar{
+    width : 10px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
 }
-
-// @keyframes slideLeftShutter{
-//     0%{
-//         margin-left : -2000px
-//     }
-//     100%{
-//         margin-left : 0;
-//     }
-// }
-
-// @keyframes slideRightShutter{
-//     0%{
-//         margin-right : -2000px
-//     }
-//     100%{
-//         margin-right : 0;
-//     }
-// }
+html::-webkit-scrollbar-thumb{
+    width : 10px;
+    background-color: rgba(71, 71, 71, 0.8);
+    border-radius: 10px;
+}
 
