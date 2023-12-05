@@ -12,15 +12,21 @@ body {
   align-items: center;
   overflow-x: hidden;
   font-family: "Roboto", sans-serif;
-  background: linear-gradient(180deg, rgb(255, 255, 255) 90%, rgb(32, 56, 100) 100%);
 }
 
 .links {
+  background-color: #3f5a8c;
   display: flex;
-  justify-content: space-around;
-  width: 100%;
+  width: 100vw;
+  padding-left: 15px;
+  justify-content: start;
   align-items: center;
-  justify-content: space-around;
+  gap: 20px;
+}
+.links img {
+  height: 15px;
+}
+.links a {
   color: white;
 }
 
@@ -62,7 +68,7 @@ nav .menu {
   height: 40px;
   display: flex;
   justify-content: space-around;
-  font-size: 2vw;
+  font-size: 18px;
 }
 nav .menu a {
   color: white;
@@ -96,7 +102,7 @@ nav .menu div .home img:hover {
   height: 35px;
 }
 nav .menu div .title:hover {
-  font-size: large;
+  font-size: 20px;
 }
 
 @keyframes shadefilter {
@@ -388,6 +394,7 @@ main {
   flex-direction: row;
   justify-content: space-around;
   width: 50%;
+  gap: 15px;
 }
 .languages .lang {
   display: flex;

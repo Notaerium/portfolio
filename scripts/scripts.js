@@ -6,23 +6,19 @@ let projects = document.querySelectorAll(".project")
 let leftboxes = document.querySelectorAll(".left")
 let rightboxes = document.querySelectorAll(".right")
 
-
-
 const options = {
     root: null,
-    threshold: 0.5,
+    threshold: 0.25,
     rootMargin:""    
 }
 const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
-        console.log(entry.target)
         projects.forEach((project, index) => {
             if(entry.target === project && entry.isIntersecting && !leftboxes[index].classList.contains('leftslide')){
                 leftboxes[index].classList.add('leftslide')
                 rightboxes[index].classList.add('rightslide')
             }
         })
-        console.log(entry)
 
     })
 }, options)

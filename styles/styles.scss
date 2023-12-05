@@ -1,6 +1,6 @@
 $base-color: #203864;
 $sub-color: #DAE3F3;
-$int-colot: #203864;
+$int-colot: #3f5a8c;
 $title-font : 'Russo One', sans-serif;
 
 * {
@@ -16,15 +16,21 @@ body{
     align-items: center;
     overflow-x: hidden;
     font-family: 'Roboto', sans-serif;
-    background: linear-gradient(180deg, rgba(255,255,255,1) 90%, rgba(32,56,100,1) 100%);
 }
 .links{
+    background-color: $int-colot;
     display: flex;
-    justify-content: space-around;
-    width : 100%;
+    width: 100vw;
+    padding-left: 15px;
+    justify-content: start;
     align-items: center;
-    justify-content:space-around;
-    color: white;
+    gap:20px;
+    img{
+        height: 15px;
+    }
+    a{
+        color: white;
+    }
 }
 nav{
     position: sticky;
@@ -63,7 +69,7 @@ nav{
         height: 40px;
         display: flex;
         justify-content: space-around;
-        font-size: 2vw;
+        font-size: 18px;
         a{
             color: white;
         }
@@ -96,7 +102,7 @@ nav{
                 }
             }
             .title:hover{
-                font-size: large;
+                font-size: 20px;
             }
         }
     }
@@ -386,7 +392,7 @@ main{
     flex-direction: row;
     justify-content: space-around;
     width: 50%;
-
+    gap:15px;
     .lang{
         display: flex;
         flex-direction: column;
@@ -447,6 +453,10 @@ html::-webkit-scrollbar-thumb{
     background-color: rgba(71, 71, 71, 0.8);
     border-radius: 10px;
 }
+
+// ------------------------------------------------------------------------- Media query ------------------------------------------
+// ------------------------------------------------------------------------- Media query ------------------------------------------
+// ------------------------------------------------------------------------- Media query ------------------------------------------
 
 @media (orientation : portrait) or (max-width: 1100px){
     body{
