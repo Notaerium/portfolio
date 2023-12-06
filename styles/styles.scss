@@ -2,6 +2,7 @@ $base-color: #203864;
 $sub-color: #DAE3F3;
 $int-colot: #3f5a8c;
 $title-font : 'Russo One', sans-serif;
+$text-font : 'Jost', sans-serif;
 
 * {
     padding: 0;
@@ -220,6 +221,8 @@ main{
 .introduction{
     .text{
         width : 80%;
+
+        p{font-family: $text-font;}
     }
 }
 .techIcons{
@@ -309,6 +312,7 @@ main{
             }
         }
         .text{
+            font-family: $text-font;
             .tech{
                 display: flex;
                 flex-direction: row;
@@ -514,7 +518,6 @@ html::-webkit-scrollbar-thumb{
             width : 15%;
             z-index: 2;
             left : -500px;
-            transition : 0.5s;
         }
     }
 

@@ -223,6 +223,9 @@ main {
 .introduction .text {
   width: 80%;
 }
+.introduction .text p {
+  font-family: "Jost", sans-serif;
+}
 
 .techIcons {
   height: 80px;
@@ -309,6 +312,9 @@ main {
 }
 .projects .project div p {
   text-align: justify;
+}
+.projects .project .text {
+  font-family: "Jost", sans-serif;
 }
 .projects .project .text .tech {
   display: flex;
@@ -516,7 +522,6 @@ html::-webkit-scrollbar-thumb {
     width: 15%;
     z-index: 2;
     left: -500px;
-    transition: 0.5s;
   }
   .projects {
     width: 100vw;
