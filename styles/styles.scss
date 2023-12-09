@@ -22,7 +22,7 @@ body{
     font-family: 'Roboto', sans-serif;
 }
 .links{
-    background-color: $int-colot;
+    background-color: $base-color;
     display: flex;
     width: 100vw;
     padding-left: 15px;
@@ -449,11 +449,20 @@ section .decor{
     }
 }
 footer{
-    width: 100vw;
-    background-color: $base-color;
-    color: white;
+    height: 250px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $base-color;
+    gap: 100px;
+    color: white;
+    .links{
+        width: 100vw;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 .contacts{

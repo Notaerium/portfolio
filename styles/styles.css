@@ -17,7 +17,7 @@ body {
 }
 
 .links {
-  background-color: #3f5a8c;
+  background-color: #203864;
   display: flex;
   width: 100vw;
   padding-left: 15px;
@@ -456,11 +456,20 @@ section .decor {
 }
 
 footer {
-  width: 100vw;
-  background-color: #203864;
-  color: white;
+  height: 250px;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #203864;
+  gap: 100px;
+  color: white;
+}
+footer .links {
+  width: 100vw;
   flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 .contacts {
