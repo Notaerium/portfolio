@@ -1,5 +1,6 @@
 $base-color: #203864;
 $sub-color: #DAE3F3;
+$sub-alternate-color: #e8fcf7;
 $int-colot: #3f5a8c;
 $title-font : 'Russo One', sans-serif;
 $text-font : 'Jost', sans-serif;
@@ -230,6 +231,35 @@ main{
 .techIcons{
     height: 80px;
 }
+section .decor{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 30px;
+    background-color: $sub-alternate-color;
+    opacity: 0.8;
+    z-index: -2;
+}
+
+#decorProject{
+    right:100px;
+    transform: rotate(15deg);
+    animation: slideupdown 5s infinite alternate ease-in-out ;
+}
+#decorSkills{
+    left: 100px;
+    transform: rotate(-15deg);
+    animation: slideupdown 5s infinite alternate ease-in-out;
+    animation-delay: 2s;
+}
+@keyframes slideupdown{
+    0%{margin-top: 0px;}
+    100%{margin-top: 150px;}
+}
+@-webkit-keyframes slideupdown{
+    0%{margin-top: 0px;}
+    100%{margin-top: 150px;}
+}
 .projects{
     margin-top: 80px;
     display: flex;
@@ -459,7 +489,23 @@ html::-webkit-scrollbar-thumb{
     background-color: rgba(71, 71, 71, 0.8);
     border-radius: 10px;
 }
-
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    a{
+        color: white;
+    }
+}
+.legal{
+    margin-top: 15px;
+    height: 100vh;
+    width : 90vw;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
 // ------------------------------------------------------------------------- Media query ------------------------------------------
 // ------------------------------------------------------------------------- Media query ------------------------------------------
 // ------------------------------------------------------------------------- Media query ------------------------------------------
