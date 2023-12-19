@@ -140,6 +140,7 @@ main {
   z-index: 0;
   color: black;
   width: 100vw;
+  overflow-x: hidden;
 }
 
 .name-card {
@@ -151,13 +152,19 @@ main {
   display: flex;
   align-items: center;
 }
+.name-card .nojump {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 8;
+}
 .name-card .bg-img {
   -o-object-fit: cover;
      object-fit: cover;
   position: absolute;
   width: 100vw;
   z-index: -1;
-  animation: shadefilter 5s infinite alternate ease, movebg 8s infinite alternate;
+  animation: shadefilter 5s infinite alternate ease;
 }
 .name-card .front-card {
   position: absolute;
@@ -397,6 +404,11 @@ section .decor {
   margin-top: 30px;
   margin-bottom: 30px;
 }
+.skills ul {
+  list-style-type: none;
+  text-align: center;
+  font-weight: 800;
+}
 
 .subtitle {
   border: none;
@@ -519,7 +531,7 @@ footer a {
 
 .legal {
   margin-top: 15px;
-  height: 100vh;
+  height: 100dvh;
   width: 90vw;
   display: flex;
   flex-direction: column;
@@ -583,6 +595,9 @@ footer a {
     width: 15%;
     z-index: 2;
     left: -500px;
+  }
+  .name-card .bg-img {
+    animation: movebg 8s infinite alternate;
   }
   .projects {
     width: 100vw;

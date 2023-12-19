@@ -31,3 +31,10 @@ function showMenu(){
     let menu= document.querySelector(".menu")
     menu.classList.toggle('display')
 }
+
+let bannerImg = document.querySelector(".bg-img")
+let nameCard = document.querySelector(".name-card")
+nameCard.addEventListener("mousemove", (e) => {
+    bannerImg.style.right = e.offsetX/20 + "px";
+    bannerImg.style.top = -e.offsetY/20 + "px";
+})
