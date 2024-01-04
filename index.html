@@ -2,11 +2,27 @@
 <!--vinhparneix.pro@gmail.com-->
 <!--    No template used     -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="ressources/images/favicon.png" />
+    <meta name=“keywords” content=“portfolio,développeur,web,vinh,vinhparneix.com” />
+    <meta name="description" content="Développeur: Vinh Parneix, Contenu: Portfolio d'un Développeur web Full Stack, Langages: HTML, CSS, JavaScript, PHP, TypeScript, JavaEE...">
+    <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+    <meta name="author" content="Vinh Parneix">
+    <meta name="Language" content="fr" />
+    <meta property="og:title" content="Vinh Parneix - Portfolio">
+    <meta property="og:locale" content="fr_FR" />
+	<meta property="og:type" content="article" />
+	
+	<meta property="og:description" content="Développeur: Vinh Parneix, Contenu: Portfolio d'un Développeur web Full Stack, Langages: HTML, CSS, JavaScript, PHP, TypeScript, JavaEE..." />
+	<meta property="og:url" content="https://vinhparneix.com" />
+	<meta property="og:site_name" content="Vinh Parneix - Portfolio" />
+	<meta property="article:publisher" content="https://www.linkedin.com/in/vinh-parneix-290080110/" />
+	<meta property="article:modified_time" content="2023-12-21T10:00:00+00:00" />
+    <link rel="canonical" href="https://vinhparneix.com">
+
+    <link rel="icon" type="image/x-icon" href="favicon.png" />
     <link rel="stylesheet" href="styles/styles.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,11 +35,11 @@
 <body>
     <nav>
         <div class="burgerIcone" onclick="showMenu()">
-            <img src="ressources/images/Hamburger_icon.svg.png">
+            <img src="ressources/images/Hamburger_icon.svg.png" alt="menu">
         </div>
         <div class="menu">
             <div class="nav-left"> 
-                <div class="title home" onclick="showMenu()"><a href="#"><img src="ressources\images\home-2502.svg" title="home"/></a></div>
+                <div class="title home" onclick="showMenu()"><a href="#"><img src="ressources\images\home-2502.svg" title="home" alt="home"/></a></div>
                 <div class="title" onclick="showMenu()"><a href="#introduction">Présentation</a></div>
                 <div class="title" onclick="showMenu()"><a href="#projects">Projets</a></div>
                 <div class="title" onclick="showMenu()"><a href="#skills">Compétences</a></div>
@@ -37,21 +53,21 @@
         <section class="name-card">
             <div class="nojump"></div>
             <div class="bg-img">
-                <img id="bannerImg" src="ressources/images/StockSnap_YWJQBD3VIX.jpg" alt="namecard">
+                <img id="bannerImg" src="ressources/images/banner.webp" alt="namecard">
             </div>
             <div class="front-card">
                 <span id="span-top"></span>
                 <div class="name-title">
                     <div class="name"><p>Vinh PARNEIX</p></div>
-                    <div class="title"><p>Développeur Web Full Stack</p></div>
+                    <h1>Développeur Web Full Stack</h1>
                 </div>
                 <span id="span-bot"></span>
             </div>
         </section>
         <section id='introduction' class="details introduction">
-            <div class="title"><p>UN PETIT MOT ME CONCERNANT</p></div>
+            <h2>UN PETIT MOT ME CONCERNANT</h2>
             <div class="text">
-                <p>Après avoir passé quelques années à voyager au Japon et en Australie, j'ai décidé de revenir vers une de mes premières passion: la programmation.
+                <p>Après avoir passé quelques années à voyager au Japon et en Australie, j'ai décidé de revenir vers une de mes premières passions: la programmation.
                 Ce portfolio est en lui même un projet que je développe et améliore au fil du temps, et j'espère pouvoir le remplir de nouveaux projets !</p></br>
                 <p>Je suis plutôt curieux et c'est pourquoi j'adore découvrir de nouvelles choses, de nouvelles technologies et rencontrer de nouvelles personnes.
                 C'est aussi grâce à cette curiosité que j'aime toucher à tout et ainsi faire du Front aussi bien que du Back-end.</p></br>
@@ -61,13 +77,13 @@
         </section>
         <section id="projects" class="details projects">
             <div id="decorProject" class="decor"></div>
-            <div class="title"><p>PROJETS</p></div>
-            <div class="subtitle"><p>Des projets réalisés avec des langages et technologies variés !</p></div>
+            <h2>PROJETS</h2>
+            <h3>Des projets réalisés avec des langages et technologies variés !</h3>
             <div class="project">
                 <div class="left">
                     <div class="text">
-                        <p class="subtitle">Pad musical</p>
-                        <p>Il s'agit d'un pad musical créé à l'aide de Web Audio API. Il y a une fonction Looper, qui permet de toujours s'amuser en rythme, et la fonction Libre pour ceux qui sont plus à l'aise.</p></br>
+                        <h3>Pad musical</h3>
+                        <p>Il s'agit d'un pad musical créé à l'aide de Web Audio API. Il y a une fonction Looper, qui permet de toujours s'amuser en rythme, et la fonction Libre pour ceux qui sont plus à l'aise.</p>
                         <a target="_blank" href="https://pad2fakeit.vinhparneix.com/">Aller vers le site</a>
                         <div class="tech">
                             <img class="techIcons" src="ressources/images/html-icon.svg" title="html" height="90px">
@@ -78,20 +94,20 @@
                 </div>
                 <span></span>
                 <div class="right screenshot">
-                    <a target="_blank" href="https://pad2fakeit.vinhparneix.com/"><img class="screenshot" src="ressources/images/looper_screenshot.png" title="Looper music pad" height="25%"></a>
+                    <a target="_blank" href="https://pad2fakeit.vinhparneix.com/"><img class="screenshot" src="ressources/images/looper.jpg" title="Looper music pad" alt="looper" height="25%"></a>
                     <a target="_blank" href="https://pad2fakeit.vinhparneix.com/"><div class="shutter">Aller vers le site</div></a>
                 </div>
             </div>
             <span class="sm-show"></span>
             <div class="project sm-reversed">
                 <div class="left screenshot">
-                    <a target="_blank" href="https://bulletinboard.vinhparneix.com/"><img class="screenshot" src="ressources/images/bulletin board.png" title="Looper music pad" height="25%"></a>
+                    <a target="_blank" href="https://bulletinboard.vinhparneix.com/"><img class="screenshot" src="ressources/images/bulletin board.png" title="Looper music pad" alt="bulletinboard" height="25%"></a>
                     <a target="_blank" href="https://bulletinboard.vinhparneix.com/"><div class="shutter">Aller vers le site</div></a>
                 </div>
                 <span></span>
                 <div class="right">
                     <div class="text">
-                        <p class="subtitle">Panneau d'affichage</p>
+                        <h3>Panneau d'affichage</h3>
                         <p>C'est une application Saas à utiliser au sein d'une entreprise pour faire passer des notes d'information. Il complémente le panneau d'affichage physique.</p></br>
                         <a target="_blank" href="https://bulletinboard.vinhparneix.com/">Aller vers le site</a>
                         <div class="tech">
@@ -108,7 +124,7 @@
             <div class="project">
                 <div class="left">
                     <div class="text">
-                        <p class="subtitle">Système de réservation</p>
+                        <h3>Système de réservation</h3>
                         <p>Une autre application Saas cette fois réalisée avec JEE. L'objectif est de faciliter l'emprunt et la réservation de matériel au sein d'une entreprise.</p></br>
                         <a target="_blank" href="https://github.com/Notaerium/SaasReservation">Aller vers le respository Github</a>
                         <div class="tech">
@@ -120,20 +136,20 @@
                 </div>
                 <span></span>
                 <div class="right screenshot">
-                    <a target="_blank" href="https://github.com/Notaerium/SaasReservation"><img class="screenshot" src="ressources/images/reservation.png" title="Borrowing system" height="25%"></a>
+                    <a target="_blank" href="https://github.com/Notaerium/SaasReservation"><img class="screenshot" src="ressources/images/reservation.png" title="Borrowing system" alt="Reservation"  height="25%"></a>
                     <a target="_blank" href="https://github.com/Notaerium/SaasReservation"><div class="shutter">Aller vers le repository</div></a>
                 </div>
             </div>
             <span class="sm-show"></span>
             <div class="project sm-reversed">
                 <div class="left screenshot">
-                    <a target="_blank" href="https://github.com/Notaerium/PythonProjectCS50P"><img class="screenshot" src="ressources/images/hogwarts logbook.png" title="Hogwarts' Logbook" height="25%"></a>
+                    <a target="_blank" href="https://github.com/Notaerium/PythonProjectCS50P"><img class="screenshot" src="ressources/images/hogwarts logbook.png" title="Hogwarts' Logbook" alt="Logbook"  height="25%"></a>
                     <a target="_blank" href="https://github.com/Notaerium/PythonProjectCS50P"><div class="shutter">Aller vers le repository</div></a>
                 </div>
                 <span></span>
                 <div class="right">
                     <div class="text">
-                        <p class="subtitle">Hogwarts' Logbook</p>
+                        <h3>Hogwarts' Logbook</h3>
                         <p>Ce projet a été réalisé pour l'obtention du diplôme du CS50P, le cours présenté par l'université d'Harvard portant sur le Python.</p></br>
                         <a target="_blank" href="https://github.com/Notaerium/PythonProjectCS50P">Aller vers le respository Github</a>
                         <div class="tech">
@@ -145,8 +161,8 @@
         </section>
         <section id="skills" class="details skills">
             <span id="decorSkills" class="decor"></span>
-            <div class="title"><p>COMPÉTENCES</p></div>
-            <div class="subtitle">Front-end</div>
+            <h2>COMPÉTENCES</h2>
+            <h3>Front-end</h3>
             <div class="icon-group">
                 <ul>
                     <li>HTML</li>
@@ -177,7 +193,7 @@
                     <li><img class="techIcons" src="ressources/images/react-seeklogo.com.svg" title="react"></li>
                 </ul>                          
             </div>
-            <div class="subtitle">Back-end</div>
+            <h3>Back-end</h3>
             <div class="icon-group">
                 <ul>
                     <li>Java EE</li>
@@ -208,14 +224,14 @@
                     <li><img class="techIcons" src="ressources/images/symfony-seeklogo.com.svg" title="symfony"></li>
                 </ul>              
             </div>
-            <div class="subtitle">Base de donnée</div>
+            <h3>Base de donnée</h3>
                 <div class="icon-group">
                     <ul>
                         <li>MySQL</li>
                         <li><img class="techIcons" src="ressources/images/logo-mysql-170x115.png" title="MySQL"></li>
                     </ul>
                 </div>
-            <div class="subtitle">Outils</div>
+            <h3>Outils</h3>
                 <div class="icon-group">
                     <ul>
                         <li>Bash</li>
@@ -228,7 +244,7 @@
                     
                     
                 </div>
-            <div class="subtitle">Langues</div>
+            <h3>Langues</h3>
             <div class="languages">
                 <div class="lang"><img class="flag" src="ressources/images/france-flag-icon.svg" alt="French"></div>
                 <div class="lang"><img class="flag" src="ressources/images/united-kingdom-flag-icon.svg" alt="English"></div>
@@ -236,7 +252,7 @@
             </div>
         </section>
         <section id='contacts' class="details contacts">
-            <div class="title"><p>Mes compétences vous intéressent ? N'hésitez-pas !</p></div>
+            <h2>Mes compétences vous intéressent ? N'hésitez-pas !</h2>
             <div>
                 <img src="ressources/images/attherate-icon.svg" alt="Mail"><a href="mailto:vinhparneix.pro@gmail.com">vinhparneix.pro@gmail.com</a>
             </div>

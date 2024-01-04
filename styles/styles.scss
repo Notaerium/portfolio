@@ -25,7 +25,6 @@ body{
     background-color: $base-color;
     display: flex;
     width: 100vw;
-    padding-left: 15px;
     justify-content: start;
     align-items: center;
     gap:20px;
@@ -179,7 +178,7 @@ main{
             justify-content: center;
             align-items: start;
             font-family: $title-font;
-            .title {
+            h1{
                 font-size : 4rem;
             }
             .name{
@@ -375,7 +374,7 @@ section .decor{
         }
     }
 }
-.details .title{
+.details h2{
     margin-top: 25px;
     width: 90vw;
     font-family: $title-font;
@@ -409,7 +408,7 @@ section .decor{
         font-weight: 800;
     }
 }
-.subtitle{
+h3{
     border: none;
     color: gray;
     font-size: larger;
@@ -597,11 +596,12 @@ footer{
         display: flex;
         flex-direction: column;
         justify-content: center;
-        gap: 50px;
         .sm-show{
             display: flex;
             width : 60%;
             height : 3px;
+            margin-top: 30px;
+            margin-bottom: 30px;
             background-color: $base-color;
             transform: rotate(0deg);
         }
@@ -610,14 +610,26 @@ footer{
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
             width: 100vw;
-            height: 600px;
+            height: auto;
             transition: 1s ease;
+            .text{
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                .tech{
+                    margin-top: 20px;
+                    height: auto;
+                }  
+            }
+            .screenshot{
+                position: relative;
+            }
             span{
                 display: none
             }
             .left{
+                height: auto;
                 margin-left: -1000px;
                 visibility: hidden;
             }
@@ -626,6 +638,8 @@ footer{
                 visibility: visible;
             }
             .right{
+                margin-top: 20px;
+                height: 300px;
                 margin-right: -1000px;
                 visibility: hidden;
             }
@@ -635,14 +649,30 @@ footer{
             }
         }
         .sm-reversed{
-            flex-direction: column-reverse;
-            align-self: center;
-            justify-content: space-around;
-            width: 60vw;
-            height: 600px;
-            gap: 10px;
             margin-top: 20px;
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+            width: 100vw;
+            height: auto;
+            transition: 1s ease;
+            .text{
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                .tech{
+                    margin-top: 20px;
+                }  
+            }
+            .screenshot{
+                position: relative;
+            }
+            span{
+                display: none
+            }
             .left{
+                margin-top: 20px;
+                height: 300px;
                 margin-left: -1000px;
                 visibility: hidden;
             }
@@ -651,6 +681,7 @@ footer{
                 visibility: visible;
             }
             .right{
+                height: auto;
                 margin-right: -1000px;
                 visibility: hidden;
             }
@@ -660,8 +691,11 @@ footer{
             }
         }
     }
+    .skills{
+        margin-top: 40px;
+    }
     main .name-card .front-card .name-title{
-        .title {
+        h1{
             font-size : 2rem;
         }
         .name{
@@ -670,7 +704,12 @@ footer{
         }
     }
     .details .title{font-size: 20px;}
-    .subtitle{font-size: 15px;}
+    h3{font-size: 15px;}
+    footer{
+        .copyright{
+            font-size: 15px;
+        }
+    }
 }
 
 @media (orientation: landscape) and (min-height: 1200px){
